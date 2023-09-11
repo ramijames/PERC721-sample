@@ -1,13 +1,5 @@
-# Sample Hardhat Project
+# PERC721 Sample
 
-This project demonstrates a basic Hardhat use case. It comes with a sample contract, a test for that contract, and a script that deploys that contract.
+This is a sample ERC721 contract that implements Swisstronic's account check. To use private view functions like `ownerOf` and `balanceOf` require that the user be authorized.
 
-Try running some of the following tasks:
-
-```shell
-npx hardhat help
-npx hardhat test
-REPORT_GAS=true npx hardhat test
-npx hardhat node
-npx hardhat run scripts/deploy.js
-```
+To authorize a user to access these functions, you can use the modifier `onlyAuthorized` via the `grantAcccess()` and `revokeAccess()` functions.
